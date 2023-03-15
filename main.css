@@ -10,6 +10,16 @@ header {
     color:aquamarine;
     padding: 10px; 
     font-size: 16pt;
+    transition: 1s;
+}
+
+header:active {
+    font-size: 30px;
+}
+
+header:hover {
+    font-size: 30px;
+    color: black;
 }
 
 
@@ -18,16 +28,26 @@ footer {
     color:aquamarine; 
     padding: 10px; 
     font-size: 16pt; 
+    transition: 1s;
     text-align: right"
 }
 
+footer:active {
+    font-size: 30px;
+}
+footer:hover {
+    font-size: 30px;
+    color: black;
+}
+
 a {
-    transition: 300ms 600ms;
+    text-decoration: none;
+    transition: 0,3ms;
     text-shadow: 7px 5px 3px yellow;
 }
 
 a:visited {
-    background-color: purple;
+    text-decoration: line-through;
     color: gold
 }
 
