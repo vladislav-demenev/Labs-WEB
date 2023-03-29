@@ -14,7 +14,7 @@ header {
 }
 
 header:active {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 header:hover {
@@ -26,10 +26,13 @@ header:hover {
 footer {
     background: linear-gradient(to right,red,orange,yellow,green,lightblue,blue,purple);
     color:aquamarine; 
-    padding: 10px; 
+    padding: 1px; 
     font-size: 16pt; 
     transition: 1s;
-    text-align: right"
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer:active {
