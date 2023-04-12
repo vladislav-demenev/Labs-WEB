@@ -19,6 +19,12 @@
             display: inline-block;
             cursor: pointer;
         }
+
+        #output {
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
+        }
     </style>
 
     <script>
@@ -49,6 +55,32 @@
             let result = a-b
             alert(a + ' минус ' + b + ' равно ' + result)
         }
+        
+        function showDel() {
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a/b
+            alert(a + ' делить на ' + b + ' равно ' + result)
+        }
+
+        function showUmn() {
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a*b
+            alert(a + ' умножить на ' + b + ' равно ' + result)
+        }
+
+        function changeOutput(buttonNum, backColor, textColor, borderColor) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка ' + buttonNum;
+            output.style.background= backColor;
+            output.style.color= textColor;
+            output.style.border=borderColor;
+        }
     </script>
 
 </head>
@@ -61,9 +93,19 @@
         <label>Первое число: <input type="number" value="0" id="numberA"></label><br>
         <label>Второе число: <input type="number" value="0" id="numberB"></label><br>
         <div class="massage" onclick="showSum()">Найти сумму чисел</div>
-
         <div class="massage" onclick="showAuthor()">Узнать,кто автор страницы</div>
         <div class="massage" onclick="showMinus()">Разница чисел</div>
+        <div class="massage" onclick="showUmn()">Умножение</div>
+        <div class="massage" onclick="showDel()">Деление</div>
+
+        <div>
+            <input type="buttom" value="Кнопка 1" onclick="changeOutput(1,'red','yellow', 'double')">  
+            <input type="buttom" value="Кнопка 2" onclick="changeOutput(2,'black','lime', 'dashed')">
+            <input type="buttom" value="Кнопка 3" onclick="changeOutput(3,'orange','purple', 'dotted')">
+            <input type="buttom" value="Кнопка 4" onclick="changeOutput(4,'white','blue', 'inset')">
+        </div>
+
+        <div id='output'></div>
     </main>
 
     <footer  onclick="showPol()">
