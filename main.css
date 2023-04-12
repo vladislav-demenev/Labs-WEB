@@ -22,6 +22,9 @@ header:hover {
     color: black;
 }
 
+main {
+    margin: 10px 20px; 
+}
 
 footer {
     background: linear-gradient(to right,red,orange,yellow,green,lightblue,blue,purple);
