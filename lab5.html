@@ -6,6 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Деменев Владислав Владислав. Лабораторная 5</title>
     <link rel='stylesheet' href="main.css">
+    <style>
+        .massage {
+            background-color: rgb(180, 177, 177);
+            font: red ;
+            border: 1px solid;
+            border-radius: 7px;
+            padding: 7px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            display: inline-block;
+        }
+    </style>
+
+    <script>
+        function showSum() {
+            let a=5154;
+            let b = 7891;
+            let result = a+b
+            alert('Сумма ' + a + ' и ' +b + ' равна ' +result)
+        }
+    </script>
+
 </head>
 <body>
     <header>
@@ -13,7 +38,8 @@
     </header>
 
     <main>
-
+        <div class="massage" onclick="showSum()">Сколько будет 5154+7891?</div>
+        <div class="massage">Узнать,кто автор страницы</div>
     </main>
 
     <footer>
