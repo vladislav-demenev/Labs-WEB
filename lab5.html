@@ -29,6 +29,16 @@
             let result = a+b
             alert('Сумма ' + a + ' и ' +b + ' равна ' +result)
         }
+
+        function showAuthor() {
+            let author = 'Автор странциы:\nДеменев Владислав Владислав'
+            alert(author);
+        }
+
+        function showPol() {
+            let pol = 'Привет пользователь!'
+            alert(pol);
+        }
     </script>
 
 </head>
@@ -39,10 +49,10 @@
 
     <main>
         <div class="massage" onclick="showSum()">Сколько будет 5154+7891?</div>
-        <div class="massage">Узнать,кто автор страницы</div>
+        <div class="massage" onclick="showAuthor()">Узнать,кто автор страницы</div>
     </main>
 
-    <footer>
+    <footer  onclick="showPol()">
         &copy; Владислав Деменев, ФБИ-13, 2 курс, 2023
     </footer>
 </body>
