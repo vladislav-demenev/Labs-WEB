@@ -25,6 +25,18 @@
             width: 300px;
             height: 40px;
         }
+
+        .kassa {
+            margin-top: 20px;
+            border: 1px solid;
+            border-radius: 7px;
+            padding: 7px;
+            width: 240px;
+            height: 300px;
+            overflow:hidden;
+            position: relative;
+            z-index: 2;
+        }
     </style>
 
     <script>
@@ -81,17 +93,31 @@
             output.style.color= textColor;
             output.style.border=borderColor;
         }
+
+        function kassa() {
+            let inputA = document.getElementById('Apple')
+            let inputB = document.getElementById('Pear')
+            let inputC = document.getElementById('Orange')
+            let inputD = document.getElementById('Melon')
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let c = parseInt(inputC.value);
+            let d = parseInt(inputD.value);
+            let result1 = 100 * a + 80*b + 150*c + 300*d;
+            let output = document.getElementById('result1');
+            output.innerHTML = 'Итого: ' + result1 + ' р';
+        }
     </script>
 
 </head>
 <body>
     <header>
-        НГТУ, ФБ, Лабораторная работа 4
+        НГТУ, ФБ, Лабораторная работа 5
     </header>
 
     <main>
-        <label>Первое число: <input type="number" value="0" id="numberA"></label><br>
-        <label>Второе число: <input type="number" value="0" id="numberB"></label><br>
+        <label>Первое число: <input type="number" value="1" id="numberA"></label><br>
+        <label>Второе число: <input type="number" value="1" id="numberB"></label><br>
         <div class="massage" onclick="showSum()">Найти сумму чисел</div>
         <div class="massage" onclick="showAuthor()">Узнать,кто автор страницы</div>
         <div class="massage" onclick="showMinus()">Разница чисел</div>
@@ -99,13 +125,31 @@
         <div class="massage" onclick="showDel()">Деление</div>
 
         <div>
-            <input type="buttom" value="Кнопка 1" onclick="changeOutput(1,'red','yellow', 'double')">  
-            <input type="buttom" value="Кнопка 2" onclick="changeOutput(2,'black','lime', 'dashed')">
-            <input type="buttom" value="Кнопка 3" onclick="changeOutput(3,'orange','purple', 'dotted')">
-            <input type="buttom" value="Кнопка 4" onclick="changeOutput(4,'white','blue', 'inset')">
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1,'red','yellow', 'double')">  
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2,'black','lime', 'dashed')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3,'orange','purple', 'dotted')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4,'white','blue', 'inset')">
         </div>
 
         <div id='output'></div>
+
+        <div class="kassa">
+            <h2>Корзина товаров</h2>
+            <div> Яблоки  (100р/шт)
+                <input type="number" value="1" id="Apple"><br>
+            </div>
+            <div> Груши  (80р/шт)
+                <input type="number" value="1" id="Pear"><br>
+              </div>
+              <div> Апельсины  (150р/шт)
+                <input type="number" value="1" id="Orange"><br>
+              </div>
+              <div> Дыни (300р/шт)
+                <input type="number" value="1" id="Melon"><br>
+              </div>
+            <input type="button" value="Рассчитать" onclick="kassa()">
+            <div id="result1"></div>
+          </div>
     </main>
 
     <footer  onclick="showPol()">
