@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Деменев Владислав Владислав. Лабораторная 5</title>
+    <title>Р вЂќР ВµР С�Р ВµР Р…Р ВµР Р† Р вЂ™Р В»Р В°Р Т‘Р С‘РЎРѓР В»Р В°Р Р† Р вЂ™Р В»Р В°Р Т‘Р С‘РЎРѓР В»Р В°Р Р†. Р вЂєР В°Р В±Р С•РЎР‚Р В°РЎвЂљР С•РЎР‚Р Р…Р В°РЎРЏ 5</title>
     <link rel='stylesheet' href="main.css">
     <style>
         .massage {
@@ -37,6 +37,18 @@
             position: relative;
             z-index: 2;
         }
+
+        .krug{
+            width: 50px;
+            height: 50px;
+            margin-top: 10px;
+            border-radius: 50px;
+            border: 1px solid;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            display: inline-block;
+        }
     </style>
 
     <script>
@@ -46,16 +58,16 @@
             let a = parseInt(inputA.value);
             let b = parseInt(inputB.value);
             let result = a+b
-            alert('Сумма ' + a + ' и ' + b + ' равна ' + result)
+            alert('Р РЋРЎС“Р С�Р С�Р В° ' + a + ' Р С‘ ' + b + ' РЎР‚Р В°Р Р†Р Р…Р В° ' + result)
         }
 
         function showAuthor() {
-            let author = 'Автор странциы:\nДеменев Владислав Владислав'
+            let author = 'Р С’Р Р†РЎвЂљР С•РЎР‚ РЎРѓРЎвЂљРЎР‚Р В°Р Р…РЎвЂ Р С‘РЎвЂ№:\nР вЂќР ВµР С�Р ВµР Р…Р ВµР Р† Р вЂ™Р В»Р В°Р Т‘Р С‘РЎРѓР В»Р В°Р Р† Р вЂ™Р В»Р В°Р Т‘Р С‘РЎРѓР В»Р В°Р Р†'
             alert(author);
         }
 
         function showPol() {
-            let pol = 'Привет пользователь!'
+            let pol = 'Р СџРЎР‚Р С‘Р Р†Р ВµРЎвЂљ Р С—Р С•Р В»РЎРЉР В·Р С•Р Р†Р В°РЎвЂљР ВµР В»РЎРЉ!'
             alert(pol);
         }
 
@@ -65,7 +77,7 @@
             let a = parseInt(inputA.value);
             let b = parseInt(inputB.value);
             let result = a-b
-            alert(a + ' минус ' + b + ' равно ' + result)
+            alert(a + ' Р С�Р С‘Р Р…РЎС“РЎРѓ ' + b + ' РЎР‚Р В°Р Р†Р Р…Р С• ' + result)
         }
         
         function showDel() {
@@ -74,7 +86,7 @@
             let a = parseInt(inputA.value);
             let b = parseInt(inputB.value);
             let result = a/b
-            alert(a + ' делить на ' + b + ' равно ' + result)
+            alert(a + ' Р Т‘Р ВµР В»Р С‘РЎвЂљРЎРЉ Р Р…Р В° ' + b + ' РЎР‚Р В°Р Р†Р Р…Р С• ' + result)
         }
 
         function showUmn() {
@@ -83,13 +95,13 @@
             let a = parseInt(inputA.value);
             let b = parseInt(inputB.value);
             let result = a*b
-            alert(a + ' умножить на ' + b + ' равно ' + result)
+            alert(a + ' РЎС“Р С�Р Р…Р С•Р В¶Р С‘РЎвЂљРЎРЉ Р Р…Р В° ' + b + ' РЎР‚Р В°Р Р†Р Р…Р С• ' + result)
         }
 
         function changeOutput(buttonNum, backColor, textColor, borderColor) {
             let output = document.getElementById('output');
-            output.innerHTML = 'Нажата кнопка ' + buttonNum;
-            output.style.background= backColor;
+            output.innerHTML = 'Р СњР В°Р В¶Р В°РЎвЂљР В° Р С”Р Р…Р С•Р С—Р С”Р В° ' + buttonNum;
+            output.style.backgkrug= backColor;
             output.style.color= textColor;
             output.style.border=borderColor;
         }
@@ -99,61 +111,84 @@
             let inputB = document.getElementById('Pear')
             let inputC = document.getElementById('Orange')
             let inputD = document.getElementById('Melon')
+            let inputE = document.getElementById('Xurma')
             let a = parseInt(inputA.value);
             let b = parseInt(inputB.value);
             let c = parseInt(inputC.value);
             let d = parseInt(inputD.value);
-            let result1 = 100 * a + 80*b + 150*c + 300*d;
+            let e = parseInt(inputE.value);
+            let result1 = 100 * a + 80 * b + 150 * c + 300 * d+ 228 * e;
             let output = document.getElementById('result1');
-            output.innerHTML = 'Итого: ' + result1 + ' р';
+            output.innerHTML = 'Р пїЅРЎвЂљР С•Р С–Р С•: ' + result1 + ' РЎР‚';
         }
+
+        function unshow(id) {
+            let a = document.getElementById(id);
+            a.style.display = "none";
+        }
+        
     </script>
 
 </head>
 <body>
     <header>
-        НГТУ, ФБ, Лабораторная работа 5
+        Р СњР вЂњР СћР Р€, Р В¤Р вЂ�, Р вЂєР В°Р В±Р С•РЎР‚Р В°РЎвЂљР С•РЎР‚Р Р…Р В°РЎРЏ РЎР‚Р В°Р В±Р С•РЎвЂљР В° 5
     </header>
 
     <main>
-        <label>Первое число: <input type="number" value="1" id="numberA"></label><br>
-        <label>Второе число: <input type="number" value="1" id="numberB"></label><br>
-        <div class="massage" onclick="showSum()">Найти сумму чисел</div>
-        <div class="massage" onclick="showAuthor()">Узнать,кто автор страницы</div>
-        <div class="massage" onclick="showMinus()">Разница чисел</div>
-        <div class="massage" onclick="showUmn()">Умножение</div>
-        <div class="massage" onclick="showDel()">Деление</div>
+        <label>Р СџР ВµРЎР‚Р Р†Р С•Р Вµ РЎвЂЎР С‘РЎРѓР В»Р С•: <input type="number" value="1" id="numberA"></label><br>
+        <label>Р вЂ™РЎвЂљР С•РЎР‚Р С•Р Вµ РЎвЂЎР С‘РЎРѓР В»Р С•: <input type="number" value="1" id="numberB"></label><br>
+        <div class="massage" onclick="showSum()">Р СњР В°Р в„–РЎвЂљР С‘ РЎРѓРЎС“Р С�Р С�РЎС“ РЎвЂЎР С‘РЎРѓР ВµР В»</div>
+        <div class="massage" onclick="showAuthor()">Р Р€Р В·Р Р…Р В°РЎвЂљРЎРЉ,Р С”РЎвЂљР С• Р В°Р Р†РЎвЂљР С•РЎР‚ РЎРѓРЎвЂљРЎР‚Р В°Р Р…Р С‘РЎвЂ РЎвЂ№</div>
+        <div class="massage" onclick="showMinus()">Р В Р В°Р В·Р Р…Р С‘РЎвЂ Р В° РЎвЂЎР С‘РЎРѓР ВµР В»</div>
+        <div class="massage" onclick="showUmn()">Р Р€Р С�Р Р…Р С•Р В¶Р ВµР Р…Р С‘Р Вµ</div>
+        <div class="massage" onclick="showDel()">Р вЂќР ВµР В»Р ВµР Р…Р С‘Р Вµ</div>
 
         <div>
-            <input type="button" value="Кнопка 1" onclick="changeOutput(1,'red','yellow', 'double')">  
-            <input type="button" value="Кнопка 2" onclick="changeOutput(2,'black','lime', 'dashed')">
-            <input type="button" value="Кнопка 3" onclick="changeOutput(3,'orange','purple', 'dotted')">
-            <input type="button" value="Кнопка 4" onclick="changeOutput(4,'white','blue', 'inset')">
+            <input type="button" value="Р С™Р Р…Р С•Р С—Р С”Р В° 1" onclick="changeOutput(1,'red','yellow', 'double')">  
+            <input type="button" value="Р С™Р Р…Р С•Р С—Р С”Р В° 2" onclick="changeOutput(2,'black','lime', 'dashed')">
+            <input type="button" value="Р С™Р Р…Р С•Р С—Р С”Р В° 3" onclick="changeOutput(3,'orange','purple', 'dotted')">
+            <input type="button" value="Р С™Р Р…Р С•Р С—Р С”Р В° 4" onclick="changeOutput(4,'white','blue', 'inset')">
         </div>
 
         <div id='output'></div>
 
         <div class="kassa">
-            <h2>Корзина товаров</h2>
-            <div> Яблоки  (100р/шт)
+            <h2>Р С™Р С•РЎР‚Р В·Р С‘Р Р…Р В° РЎвЂљР С•Р Р†Р В°РЎР‚Р С•Р Р†</h2>
+            <div> Р Р‡Р В±Р В»Р С•Р С”Р С‘  (100РЎР‚/РЎв‚¬РЎвЂљ)
                 <input type="number" value="1" id="Apple"><br>
             </div>
-            <div> Груши  (80р/шт)
+            <div> Р вЂњРЎР‚РЎС“РЎв‚¬Р С‘  (80РЎР‚/РЎв‚¬РЎвЂљ)
                 <input type="number" value="1" id="Pear"><br>
               </div>
-              <div> Апельсины  (150р/шт)
+              <div> Р С’Р С—Р ВµР В»РЎРЉРЎРѓР С‘Р Р…РЎвЂ№  (150РЎР‚/РЎв‚¬РЎвЂљ)
                 <input type="number" value="1" id="Orange"><br>
               </div>
-              <div> Дыни (300р/шт)
+              <div> Р вЂќРЎвЂ№Р Р…Р С‘ (300РЎР‚/РЎв‚¬РЎвЂљ)
                 <input type="number" value="1" id="Melon"><br>
               </div>
-            <input type="button" value="Рассчитать" onclick="kassa()">
+              <div> Р ТђРЎС“РЎР‚Р С�Р В° (228/РЎв‚¬РЎвЂљ)
+                <input type="number" value="1" id="Xurma"><br>
+              </div>
+            <input type="button" value="Р В Р В°РЎРѓРЎРѓРЎвЂЎР С‘РЎвЂљР В°РЎвЂљРЎРЉ" onclick="kassa()">
             <div id="result1"></div>
           </div>
+
+          <div style="background-color: red" class="krug" id="c1" onclick="unshow('c1')">1</div>
+          <div style="background-color: orange" class="krug" id="c2" onclick="unshow('c2')">2</div>
+          <div style="background-color: yellow" class="krug" id="c3" onclick="unshow('c3')">3</div>
+          <div style="background-color: green" class="krug" id="c4" onclick="unshow('c4')">4</div>
+          <div style="background-color: lightblue" class="krug" id="c5" onclick="unshow('c5')">5</div>
+          <div style="background-color: blue" class="krug" id="c6" onclick="unshow('c6')">6</div>
+          <div style="background-color: purple" class="krug" id="c7" onclick="unshow('c7')">7</div>
+          <div style="background-color: rgb(252, 101, 0)" class="krug" id="c8" onclick="unshow('c8')">8</div>
+          <div style="background-color: rgb(0, 255, 200)" class="krug" id="c9" onclick="unshow('c9')">9</div>
+          <div style="background-color: rgb(245, 152, 152)" class="krug" id="c10" onclick="unshow('c10')">10</div>
+
     </main>
 
     <footer  onclick="showPol()">
-        &copy; Владислав Деменев, ФБИ-13, 2 курс, 2023
+        &copy; Р вЂ™Р В»Р В°Р Т‘Р С‘РЎРѓР В»Р В°Р Р† Р вЂќР ВµР С�Р ВµР Р…Р ВµР Р†, Р В¤Р вЂ�Р пїЅ-13, 2 Р С”РЎС“РЎР‚РЎРѓ, 2023
     </footer>
 </body>
 </html>
