@@ -39,20 +39,28 @@
             text-align: center;
         }
 
+        #myBlock {
+            width: 100px;
+            cursor: pointer;
+            background-color: pink;
+            margin-top: 230px;
+            text-align: center;
+            border: 2px solid red;
+            border-radius: 10px;
+        }
+
         #moving-block {
             position: absolute;
             left: 0;
             transform: translateX(0%);
             transition: all 2s ease-out;
-            background-color: aquamarine;
+            background-color: green;
             width: 150px;
             height: 150px;
             margin-top: 30px;
             text-align: center;
             line-height: 150px;
             cursor: pointer;
-            border: 2px solid green;
-            border-radius: 10%;
         }
 
     </style>
@@ -225,6 +233,10 @@
 
         <div id="moving-block" onclick="moveBlock()">
             Щёлкни меня
+        </div>
+
+        <div id="myBlock" onclick="increaseWidth()">
+            Расширение
         </div>
 
     </main>
