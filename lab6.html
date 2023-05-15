@@ -29,6 +29,15 @@
             background-color: lightgray;
             padding: 10px;
         }
+        .color {
+            background-color: yellow;
+            border: 2px solid;
+            border-radius: 20px;
+            width: 250px;
+            padding: 10px;
+            margin: 40px auto;
+            text-align: center;
+        }
 
     </style>
 
@@ -91,6 +100,33 @@
             screens[0].style.display = 'block';
         }
 
+        function changecolor(div) {
+            if (div.style.backgroundColor == 'yellow') {
+                div.style.backgroundColor = 'red';
+                document.getElementById('color-name').innerHTML = 'красный';
+            }
+            else if (div.style.backgroundColor == 'red') {
+                div.style.backgroundColor = 'black';
+                div.style.color = 'white';
+                document.getElementById('color-name').innerHTML = 'черный';
+            }
+            else if (div.style.backgroundColor == 'black') {
+                div.style.backgroundColor = 'pink';
+                div.style.color = 'black';
+                document.getElementById('color-name').innerHTML = 'розовый';
+            }
+            else if (div.style.backgroundColor == 'pink') {
+                div.style.backgroundColor = 'green';
+                div.style.color = 'white';
+                document.getElementById('color-name').innerHTML = 'зеленый';
+            }
+            else {
+                div.style.backgroundColor = 'yellow';
+                document.getElementById('color-name').innerHTML = 'желтый';
+                div.style.color = 'black'
+            }
+        }
+
     </script>
 </head>
 
@@ -143,6 +179,11 @@
             E. Если захотите сыграть еще нажмите на кнопку сыграть еще раз
         </div>
 
+        <div class="color" ondblclick="changecolor(this)">
+            Цвет: <span id="color-name">желтый</span><br>
+            Сделайте двойной щелчок, чтобы сменить.
+        </div>
+        
     </main>
 
     <footer>
