@@ -39,6 +39,22 @@
             text-align: center;
         }
 
+        #moving-block {
+            position: absolute;
+            left: 0;
+            transform: translateX(0%);
+            transition: all 2s ease-out;
+            background-color: aquamarine;
+            width: 150px;
+            height: 150px;
+            margin-top: 30px;
+            text-align: center;
+            line-height: 150px;
+            cursor: pointer;
+            border: 2px solid green;
+            border-radius: 10%;
+        }
+
     </style>
 
     <script>
@@ -127,6 +143,29 @@
             }
         }
 
+        function moveBlock() {
+            let block = document.getElementById("moving-block");
+            if (block.style.left == "0px") {
+            block.style.transform = "rotate(4turn)";
+            block.style.left = "calc(100% - 153px)";
+            
+            } else {
+            block.style.left = "0";
+            block.style.transform = "rotate(0)";
+            }
+        }
+
+        function increaseWidth() {
+            const block = document.getElementById("myBlock");
+            const currentWidth = parseInt(block.style.width);
+            const newWidth = currentWidth + 50;
+            if (newWidth <= 1000) {
+            block.style.width = newWidth + "px";
+            } else {
+            block.style.width = "100px";
+            }
+        }
+
     </script>
 </head>
 
@@ -183,7 +222,11 @@
             Цвет: <span id="color-name">желтый</span><br>
             Сделайте двойной щелчок, чтобы сменить.
         </div>
-        
+
+        <div id="moving-block" onclick="moveBlock()">
+            Щёлкни меня
+        </div>
+
     </main>
 
     <footer>
