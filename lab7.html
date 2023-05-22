@@ -38,6 +38,24 @@
             document.getElementById('detail').innerHTML = 'Среднее значение: ' + average;
         }
 
+        function addTransparentBlocks() {
+            let transparentBlocks = document.getElementById('transparent-blocks');
+            let newOpacity = 0.05;
+
+            for (let i = 0; i < 10; i++) {
+                let quad = document.createElement('div');
+
+                quad.style.backgroundColor = 'green';
+                quad.style.height = '20px';
+                quad.style.width = '100px';
+                quad.style.margin = '5px';
+                quad.style.opacity = newOpacity;
+                transparentBlocks.appendChild(quad);
+
+                newOpacity += 0.1;
+            }
+        }
+
     </script>
 
 </head>
@@ -54,6 +72,9 @@
         <button onclick="showExchange()">Курс доллара</button>
         <table border="1" id="dollar-exchange"></table>
         <div id="detail"></div>
+
+        <button onclick="addTransparentBlocks()">Создать полупрозрачные блоки</button>
+        <div id="transparent-blocks"></div>
     </main>
 
     <footer>
