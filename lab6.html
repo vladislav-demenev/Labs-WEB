@@ -159,12 +159,12 @@
         function moveBlock() {
             let block = document.getElementById("moving-block");
             if (block.style.left == "0px") {
-            block.style.transform = "rotate(4turn)";
-            block.style.left = "calc(100% - 153px)";
-            
-            } else {
-            block.style.left = "0";
-            block.style.transform = "rotate(0)";
+                block.style.transform = "rotate(4turn)";
+                block.style.left = "calc(100% - 153px)";
+            } 
+            else {
+                block.style.left = "0";
+                block.style.transform = "rotate(0)";
             }
         }
 
@@ -173,9 +173,9 @@
             const currentWidth = parseInt(block.style.width);
             const newWidth = currentWidth + 50;
             if (newWidth <= 1000) {
-            block.style.width = newWidth + "px";
+                block.style.width = newWidth + "px";
             } else {
-            block.style.width = "100px";
+                block.style.width = "100px";
             }
         }
 
@@ -259,12 +259,13 @@
 
         <div class="pravilo" style="display: none;">
             <button onclick="rulesOff()">Скрыть правила игры</button><br>
-            <br>
-            А. Нажмите на кнопку сыграть в игру <br>
-            B. Введите ваш вариант задуманного числа <br>
-            С. Если число меньше задуманного введите число поменьше <br>
-            D. Если число больше задуманного введите число побольше <br>
-            E. Если захотите сыграть еще нажмите на кнопку сыграть еще раз
+            <dl>
+            <dd>А. Нажмите на кнопку сыграть в игру </dd>
+            <dd>B. Введите ваш вариант задуманного числа </dd>
+            <dd>С. Если число меньше задуманного введите число поменьше </dd>
+            <dd>D. Если число больше задуманного введите число побольше </dd>
+            <dd></dd>E. Если захотите сыграть еще нажмите на кнопку сыграть еще раз</dd>
+            </dl>
         </div>
 
         <div class="color" ondblclick="changecolor(this)">
@@ -301,9 +302,6 @@
             
        <div><img id="wear" style="background-color: gray;"></div>
         
-
-    </div>
-
     </main>
 
     <footer>
