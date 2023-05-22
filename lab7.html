@@ -83,6 +83,18 @@
             }
         }
 
+        function tableUmno() {
+            let stud = 42;
+            let newTable = document.getElementById('tableOfUmno');
+
+            for (let i = 13; i<=33; i++) {
+                let newTr = document.createElement('tr');
+                let newTd = document.createElement('td');
+                newTd.innerHTML = i + '*' + stud + '=' + (stud * i)
+                newTr.appendChild(newTd);
+                newTable.appendChild(newTr)
+            }
+        }
     </script>
 
 </head>
@@ -106,6 +118,10 @@
         <input id='inpNum' type='number' value='5' placeholder='Введите число кругов'>
         <button onclick="greenRed()">Красное/зеленое</button>
         <div id="circles"></div>
+
+        <button id="currentTable" onclick="tableUmno()">Таблица умножения на 42</button>
+        <table id="tableOfUmno"></table>
+
     </main>
 
     <footer>
