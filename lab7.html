@@ -95,6 +95,40 @@
                 newTable.appendChild(newTr)
             }
         }
+
+        function showCurs() {
+
+            let curs = [79.5, 92.06, 110.47, 73.645, 110.49, 73.65];
+            let date = ['23.05.2018', '22.05.2019', '27.05.2020', '16.12.2020', '26.05.2021', '15.12.2021'];
+            let cursTable = document.getElementById('TableCurs');
+
+            for (let i = 0; i<curs.length; i++) {
+                let tr = document.createElement('tr');
+                let dateTd = document.createElement('td');
+                let cursTd = document.createElement('td');
+                let newTd = document.createElement('td');
+                dateTd.innerHTML = date[i];
+                cursTd.innerHTML = curs[i];
+                newTd.innerHTML = (curs[i] - curs[i-1]).toFixed(2);
+                tr.appendChild(dateTd);
+                tr.appendChild(cursTd);
+                tr.appendChild(newTd);
+                cursTable.appendChild(tr);
+            }
+
+            let sum = 0;
+            for (let i = 0; i<curs.length; i++) {
+                sum = sum + curs[i];
+            }
+            let average = sum / curs.length;
+            document.getElementById('middlenum').innerHTML = 'Среднее значение: ' + average;
+
+            let maxCurs = Math.max(...curs);
+            let minCurs = Math.min(...curs);
+            document.getElementById('max').innerHTML = 'Максимльное значение: ' + maxCurs;
+            document.getElementById('min').innerHTML = 'Минимальное значение: ' + minCurs;
+
+        }
     </script>
 
 </head>
@@ -122,6 +156,12 @@
         <button id="currentTable" onclick="tableUmno()">Таблица умножения на 42</button>
         <table id="tableOfUmno"></table>
 
+        <button id="curs" onclick="showCurs()">Курс акций МКПАО "Лента"</button>
+        <table border="1" id="TableCurs"></table>
+        <div id="middlenum"></div>
+        <div id="max"></div>
+        <div id="min"></div>
+        
     </main>
 
     <footer>
