@@ -29,7 +29,7 @@ main {
 footer {
     background: linear-gradient(to right,red,orange,yellow,green,lightblue,blue,purple);
     color:aquamarine; 
-    padding: 1px; 
+    padding: auto; 
     font-size: 16pt; 
     transition: 1s;
     text-align: right;
