@@ -23,7 +23,9 @@ header:hover {
 }
 
 main {
-    margin: 10px 20px; 
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 25px; 
 }
 
 footer {
