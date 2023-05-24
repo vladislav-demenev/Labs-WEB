@@ -22,5 +22,23 @@ function showDate() {
     let out5 = document.getElementById('current-date5');
     let today5 = new Date();
     out5.innerHTML = 'Дата и время для китайской локали:' + today5.toLocaleString('zh');
+}
+
+function showDaysCount() {
+    let today = new Date();
+    let inputDate = document.querySelector('input[type=date]');
+    let result = document.getElementById('rusult-count');
+    let birthday = new Date(inputDate.value);
+    let daysCount = (today - birthday)/1000/60/60/24;
+    daysCount = Math.floor(daysCount);
+    result.innerHTML = "Количество дней с даты рождения: " + daysCount;
+}
+    
+function chistka() {
+    let inputDate = document.querySelector('input[type=date]');
+    let result =document.getElementById('rusult-count');
+
+    inputDate.value="";
+    result.innerHTML="";
 
 }
