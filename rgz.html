@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Круг</title>
+    <script>
+        function calculate() {
+        let radius = document.getElementById("radius").value;
+        let resultField = document.getElementById("result");
+        let canvas = document.getElementById('circle');
+      
+         let context = canvas.getContext('2d');
+         context.beginPath();
+         context.arc(50, 50, radius, 0, 2 * Math.PI, false);
+         context.fillStyle = 'green';
+         context.fill();
+         context.lineWidth = 1;
+         context.strokeStyle = '#003300';
+         context.stroke();
+      
+         let area = Math.PI * Math.pow(radius, 2);
+         resultField.value = "Площадь круга: " + area.toFixed(2);
+        }
+      
+        function resetFields() {
+        let radiusInput = document.getElementById("radius");
+        let resultField = document.getElementById("result");
+        let canvas = document.getElementById('circle');
+        let context = canvas.getContext('2d');
+         context.clearRect(0, 0, canvas.width, canvas.height);
+      
+         radiusInput.value = "";
+         resultField.value = "";
+        }
+    </script>
+
+    <style>
+        input[type="text"] {
+          color: blue;
+          box-shadow: 2px 2px 5px grey;
+          transition: all 1s;
+          text-align: center;
+         }
+        input[type="text1"] {
+          color: blue;
+          box-shadow: 2px 2px 5px grey;
+          transition: all 1s;
+          font-size: 40px;
+          text-align: center;
+        }
+        input[type="text"]:hover {
+          box-shadow: none;
+          color: red;
+         }
+        input[type="submit"] {
+          background-color: #4CAF50;
+          border: 1px;
+          color: white;
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+         }
+        input[type="submit"]:hover {
+          background-color: #009933;
+          transition: all 1s ease;
+         }
+        input[type="reset"] {
+          background-color: #f44336;
+          border: none;
+          color: white;
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+         }
+        input[type="reset"]:hover {
+          background-color: #ff4444;
+          transition: all 1s ease;
+        }
+    </style>
+</head>
+<body>
+<div style="border: 1px solid; height: 100%; width: 600px;">
+    <div style="margin:10px">
+    <input type="text1" id="result" name="result" readonly placeholder="Результат"><br>
+    </div>
+
+    <div  style="margin:10px">
+        <input type="text" id="radius" name="radius" placeholder="Радиус круга"><br>
+    </div>
+
+    <div style="display: line_block; margin:10px">
+        <input type="submit" value="Рассчитать" onclick="calculate()">
+        <input type="reset" value="Сбросить" onclick="resetFields()"><br>
+    </div>
+
+
+</div>
+
+<canvas id="circle" width="100" height="100"></canvas>
+
+</body>
+</html>
